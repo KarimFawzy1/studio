@@ -22,7 +22,7 @@ import { Separator } from "@/components/ui/separator"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { LogOut, Settings, User } from "lucide-react"
+import { LogOut, User } from "lucide-react"
 import { Logo } from "./logo"
 
 export type NavItem = {
@@ -128,10 +128,6 @@ function UserMenuItems({profileUrl}: {profileUrl: string}) {
                     <User className="mr-2 h-4 w-4" />
                     <span>Profile</span>
                 </Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-                <Settings className="mr-2 h-4 w-4" />
-                <span>Settings</span>
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem asChild>
