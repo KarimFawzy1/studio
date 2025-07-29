@@ -6,12 +6,7 @@ import { MoreHorizontal, Eye, Check, X } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
 import { MOCK_GRIEVANCES } from "@/lib/mock-data";
 import { Badge } from "@/components/ui/badge";
-
-const statusColors = {
-  Pending: "bg-amber-500",
-  Reviewed: "bg-blue-500",
-  Resolved: "bg-green-500",
-};
+import Link from "next/link";
 
 export default function GrievancesPage() {
   return (
@@ -54,9 +49,11 @@ export default function GrievancesPage() {
                         </Button>
                       </DropdownMenuTrigger>
                       <DropdownMenuContent align="end">
-                        <DropdownMenuItem>
-                          <Eye className="mr-2 h-4 w-4" />
-                          View Details
+                        <DropdownMenuItem asChild>
+                          <Link href={`/teacher/grievances/${grievance.id}`}>
+                            <Eye className="mr-2 h-4 w-4" />
+                            View Details
+                          </Link>
                         </DropdownMenuItem>
                         <DropdownMenuItem>
                           <Check className="mr-2 h-4 w-4" />
