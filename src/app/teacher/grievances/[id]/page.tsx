@@ -3,9 +3,10 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { PageHeader } from "@/components/page-header";
 import { MOCK_GRIEVANCES, MOCK_EXAMS } from "@/lib/mock-data";
 import { Separator } from "@/components/ui/separator";
-import { Check, X, Send, User, Calendar, Tag } from "lucide-react";
+import { Check, X, Send, User, Calendar, Tag, ArrowLeft } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
+import Link from "next/link";
 
 export default function GrievanceDetailPage({ params }: { params: { id: string } }) {
   const grievance = MOCK_GRIEVANCES.find(g => g.id === params.id);
@@ -25,6 +26,12 @@ export default function GrievanceDetailPage({ params }: { params: { id: string }
         description={`Reviewing grievance from ${grievance.studentName}`}
       >
         <div className="flex items-center gap-2">
+            <Button variant="outline" asChild>
+                <Link href="/teacher/grievances">
+                    <ArrowLeft className="mr-2 h-4 w-4" />
+                    Back
+                </Link>
+            </Button>
             <Button variant="outline">
                 <X className="mr-2 h-4 w-4" />
                 Dismiss
