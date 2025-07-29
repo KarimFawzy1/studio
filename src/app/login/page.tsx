@@ -36,7 +36,7 @@ export default function LoginPage() {
              </Button>
            </div>
           <div className="text-center text-sm">
-            <Link href="#" className="underline">
+            <Link href="/forgot-password" className="underline">
               Forgot your password?
             </Link>
           </div>
