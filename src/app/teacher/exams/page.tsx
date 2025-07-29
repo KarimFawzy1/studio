@@ -66,9 +66,11 @@ export default function ExamManagementPage() {
                             View Results
                           </Link>
                         </DropdownMenuItem>
-                        <DropdownMenuItem>
-                          <Edit className="mr-2 h-4 w-4" />
-                          Edit Exam
+                        <DropdownMenuItem asChild>
+                           <Link href={`/teacher/exams/${exam.id}/edit`}>
+                            <Edit className="mr-2 h-4 w-4" />
+                            Edit Exam
+                          </Link>
                         </DropdownMenuItem>
                         <DropdownMenuItem className="text-destructive focus:text-destructive">
                           <Trash2 className="mr-2 h-4 w-4" />
