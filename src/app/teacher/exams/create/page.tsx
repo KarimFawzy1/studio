@@ -6,6 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Textarea } from "@/components/ui/textarea";
 import { PageHeader } from "@/components/page-header";
 import { UploadCloud } from "lucide-react";
+import Link from "next/link";
 
 export default function CreateExamPage() {
   return (
@@ -77,7 +78,9 @@ export default function CreateExamPage() {
         </Card>
 
         <div className="flex justify-end gap-2">
-            <Button variant="outline">Cancel</Button>
+            <Button variant="outline" asChild>
+              <Link href="/teacher/exams">Cancel</Link>
+            </Button>
             <Button>Create Exam</Button>
         </div>
       </div>
